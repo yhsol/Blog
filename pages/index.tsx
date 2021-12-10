@@ -19,17 +19,15 @@ export async function getStaticProps() {
 
 function Home({ posts }: HomeProps) {
   return (
-    <div>
+    <>
       <Head>
         <title>Code Play</title>
       </Head>
 
-      <div className="posts">
-        {posts.map((post, index) => (
-          <Post key={index} post={post} />
-        ))}
-      </div>
-    </div>
+      {posts.map((post, index) => (
+        <Post key={index} post={post} />
+      ))}
+    </>
   );
 }
 

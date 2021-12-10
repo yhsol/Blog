@@ -24,6 +24,14 @@ export function makePosts(files: string[]) {
   });
 }
 
+export function makePost(slug: string) {
+  const markdownWithMeta = fs.readFileSync(
+    path.join(POST_FILES_PATH, slug + ".md"),
+    "utf-8"
+  );
+  return matter(markdownWithMeta);
+}
+
 export function makePaths(files: string[]) {
   return files.map((filename) => ({
     params: {

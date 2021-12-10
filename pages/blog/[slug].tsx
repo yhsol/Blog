@@ -3,11 +3,9 @@ import { POST_FILES_PATH } from "../../_modules/posts/constants/posts.const";
 import {
   getFiles,
   makePaths,
+  makePost,
 } from "../../_modules/posts/utils/handlePostFiles";
 import { FrontMatter, PathModel } from "../../_modules/posts/types/posts.types";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import Link from "next/link";
 import { marked } from "marked";
 
@@ -22,11 +20,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }: PathModel) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join(POST_FILES_PATH, slug + ".md"),
-    "utf-8"
-  );
-  const { data: frontmatter, content } = matter(markdownWithMeta);
+  const { data: frontmatter, content } = makePost(slug);
 
   return {
     props: {
@@ -43,19 +37,57 @@ interface PostPageProps {
   content: string;
 }
 
-function PostPage({ frontmatter, slug, content }: PostPageProps) {
+function PostPage({ frontmatter, content }: PostPageProps) {
   return (
     <>
-      <Link href="/">
-        <a className="btn btn-back">Go Back</a>
-      </Link>
-      <div className="card card-page">
-        <h1 className="post-title">{frontmatter?.title}</h1>
-        <div className="post-date">{frontmatter?.date}</div>
+      <article>
+        <header>
+          <h1
+            style={{
+              lineHeight: "1.1",
+              marginBottom: "1.75rem",
+              marginTop: "3.5rem",
+              fontWeight: "900",
+              fontSize: "2.5rem",
+            }}
+          >
+            {frontmatter?.title}
+          </h1>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.75rem",
+              display: "block",
+              marginBottom: "1.75rem",
+              marginTop: "-1.4rem",
+            }}
+          >
+            {frontmatter?.date}
+          </p>
+        </header>
         <div className="post-body">
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
-      </div>
+      </article>
+      <footer
+        style={{
+          fontWeight: "bold",
+          marginTop: "2rem",
+        }}
+      >
+        <div
+          style={{
+            marginBottom: "2rem",
+          }}
+        >
+          {frontmatter.tags?.length ? "Tags:" : ""}
+          {/* show tags */}
+        </div>
+
+        <Link href="/">
+          <a className="text-orange-500">Go Back</a>
+        </Link>
+      </footer>
     </>
   );
 }

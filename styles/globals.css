@@ -4,6 +4,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
+html {
+  font: 100%/1.75;
+}
+
+/* 
 * {
   box-sizing: border-box;
   margin: 0;
@@ -100,7 +105,7 @@ header a {
   margin-bottom: 20px;
   padding: 3px 10px;
 }
-
+*/
 .post-body ul,
 ol {
   font-size: 110%;
@@ -109,15 +114,17 @@ ol {
   margin: 10px 0;
 }
 
+.post-body p {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
 .post-body pre {
-  background: #f4f4f4;
+  background: #011627;
   padding: 20px;
   margin: 20px 0;
   line-height: 2.3;
-}
-
-@media (max-width: 500px) {
-  .posts {
-    grid-template-columns: 1fr;
-  }
+  overflow: auto;
+  border-radius: 8px;
+  color: lightgray;
 }
