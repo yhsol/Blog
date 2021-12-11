@@ -19,7 +19,7 @@ function Header() {
             }}
             // className={`${isMainPage ? "text-black" : "text-orange-500"} my-0 font-black text-5xl cursor-pointer`}
           >
-            <a>Blog</a>
+            <a>WhyAndHow</a>
           </h1>
         </Link>
       </div>
