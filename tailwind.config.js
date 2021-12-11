@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         lime: colors.lime,
       },
+      spacing: {
+        138: "42rem",
+      },
     },
   },
   variants: {

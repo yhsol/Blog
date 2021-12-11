@@ -5,14 +5,7 @@ function Header() {
   const router = useRouter();
   const isMainPage = router.pathname === "/";
   return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginBottom: "3rem",
-      }}
-    >
+    <header className="flex justify-between items-center mb-12">
       <div>
         <Link href="/" passHref>
           <h1
@@ -24,7 +17,7 @@ function Header() {
               fontSize: "2.5rem",
               cursor: "pointer",
             }}
-            className={isMainPage ? "text-black" : "text-orange-500"}
+            // className={`${isMainPage ? "text-black" : "text-orange-500"} my-0 font-black text-5xl cursor-pointer`}
           >
             <a>Blog</a>
           </h1>

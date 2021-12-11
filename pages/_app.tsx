@@ -5,14 +5,7 @@ import Aside from "../components/Aside";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div
-      style={{
-        width: "42rem",
-        marginLeft: "auto",
-        marginRight: "auto",
-        padding: "2rem 1rem",
-      }}
-    >
+    <div className="w-138 mx-auto py-8 px-4">
       <Header />
       <Aside />
 
