@@ -9,15 +9,9 @@ function Header() {
       <div>
         <Link href="/" passHref>
           <h1
-            style={{
-              lineHeight: "2rem",
-              marginBottom: "0",
-              marginTop: "0",
-              fontWeight: "900",
-              fontSize: "2.5rem",
-              cursor: "pointer",
-            }}
-            // className={`${isMainPage ? "text-black" : "text-orange-500"} my-0 font-black text-5xl cursor-pointer`}
+            className={`${
+              isMainPage ? "text-black text-2.5rem" : "text-orange-500 text-3xl"
+            } my-0 font-black cursor-pointer`}
           >
             <a>WhyAndHow</a>
           </h1>

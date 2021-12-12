@@ -42,26 +42,10 @@ function PostPage({ frontmatter, content }: PostPageProps) {
     <>
       <article>
         <header>
-          <h1
-            style={{
-              lineHeight: "1.1",
-              marginBottom: "1.75rem",
-              marginTop: "3.5rem",
-              fontWeight: "900",
-              fontSize: "2.5rem",
-            }}
-          >
+          <h1 className="leading-1.1 mb-7 mt-14 font-black text-2.5rem">
             {frontmatter?.title}
           </h1>
-          <p
-            style={{
-              fontSize: "1rem",
-              lineHeight: "1.75rem",
-              display: "block",
-              marginBottom: "1.75rem",
-              marginTop: "-1.4rem",
-            }}
-          >
+          <p className="text-base leading-7 block mb-7 -mt-1.4rem">
             {frontmatter?.date}
           </p>
         </header>
@@ -69,17 +53,8 @@ function PostPage({ frontmatter, content }: PostPageProps) {
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
       </article>
-      <footer
-        style={{
-          fontWeight: "bold",
-          marginTop: "2rem",
-        }}
-      >
-        <div
-          style={{
-            marginBottom: "2rem",
-          }}
-        >
+      <footer className="font-bold mt-8">
+        <div className="mb-8">
           {frontmatter.tags?.length ? "Tags:" : ""}
           {/* show tags */}
         </div>

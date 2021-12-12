@@ -4,27 +4,18 @@ import React from "react";
 function Aside() {
   return (
     <aside>
-      <div style={{ display: "flex", marginBottom: "3.5rem" }}>
-        {/* <Image
+      <div className="flex mb-14">
+        <div className="mr-0.875rem mb-0 w-14 h-14">
+          <Image
             src="/images/posts/img7.jpg"
             alt="Picture of the author"
-            width={50}
-            height={50}
-            
-          /> */}
-        <img
-          src="/images/posts/img7.jpg"
-          alt="Picture of the author"
-          style={{
-            marginRight: "0.875rem",
-            marginBottom: "0",
-            borderRadius: "50%",
-            width: "3.5rem",
-            height: "3.5rem",
-          }}
-        />
+            width="100%"
+            height="100%"
+            className="rounded-full"
+          />
+        </div>
 
-        <p style={{ maxWidth: "310px" }}>
+        <p className="max-w-310px">
           Personal blog by Yang Hansol.
           <br />I explain with words and code.
         </p>
