@@ -21,7 +21,7 @@ function Home({ posts }: HomeProps) {
   return (
     <>
       <Head>
-        <title>WhyAndHow</title>
+        <title>PaulPaul</title>
       </Head>
 
       {posts.map((post, index) => (

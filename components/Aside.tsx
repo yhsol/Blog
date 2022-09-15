@@ -15,7 +15,7 @@ function Aside() {
           />
         </div>
 
-        <p className="max-w-310px font-bold">Personal blog by Yang Hansol.</p>
+        <p className="max-w-310px font-bold">Personal blog by Paul.</p>
       </div>
     </aside>
   );

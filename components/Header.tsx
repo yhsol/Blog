@@ -13,7 +13,7 @@ function Header() {
               isMainPage ? "text-black text-2.5rem" : "text-orange-500 text-3xl"
             } my-0 font-black cursor-pointer`}
           >
-            <a>WhyAndHow</a>
+            <a>PaulPaulBlog</a>
           </h1>
         </Link>
       </div>
