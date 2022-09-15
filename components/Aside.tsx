@@ -7,7 +7,7 @@ function Aside() {
       <div className="flex mb-14">
         <div className="mr-0.875rem mb-0 w-14 h-14">
           <Image
-            src="/images/posts/img7.jpg"
+            src="/images/posts/profile.jpeg"
             alt="Picture of the author"
             width="100%"
             height="100%"
@@ -15,10 +15,7 @@ function Aside() {
           />
         </div>
 
-        <p className="max-w-310px">
-          Personal blog by Yang Hansol.
-          <br />I explain with words and code.
-        </p>
+        <p className="max-w-310px font-bold">Personal blog by Yang Hansol.</p>
       </div>
     </aside>
   );
